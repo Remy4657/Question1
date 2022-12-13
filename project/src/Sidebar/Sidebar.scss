@@ -1,0 +1,105 @@
+.sidebar {
+  height: 100vh;
+
+  i {
+    display: none;
+  }
+  .nav {
+    height: 100vh;
+    font-size: 1.6rem;
+    background-color: #191718;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+
+    ul {
+      li {
+        border-bottom: 1px solid rgb(101, 99, 99);
+        a {
+          display: block;
+          width: 100%;
+          padding: 1rem 2rem;
+        }
+        a:hover {
+          background-color: rgb(101, 99, 99);
+        }
+        i {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+      .li-icon {
+        text-align: end;
+        border-bottom: none;
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  @keyframes example {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  body {
+    height: fit-content;
+  }
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+
+    i {
+      display: block;
+      margin: 1.8rem 1.3rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: #191718;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      z-index: 0;
+    }
+    i.none {
+      display: none;
+    }
+    .nav {
+      display: none;
+
+      ul {
+        li {
+          i {
+            margin: 0;
+            padding: 1rem;
+          }
+        }
+        .li-icon {
+          display: block;
+        }
+      }
+    }
+    .display-block {
+      display: block;
+    }
+  }
+}
+@media only screen and (max-width: 1500px) {
+  body {
+    height: 100%;
+    .sidebar {
+      height: initial;
+      .nav {
+        height: 100%;
+        ul {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

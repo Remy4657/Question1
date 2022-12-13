@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.Content {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  .nav {
+    padding-top: 1.5rem;
+    i {
+      display: none;
+      cursor: pointer;
+    }
+  }
+
+  .logo {
+    background-image: url("../../images/logoNCC1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 31rem;
+    height: 12.2rem;
+    margin: 0 auto;
+  }
+  .header {
+    margin-top: 1.5rem;
+    background-color: #ccc;
+    padding: 1rem 15rem;
+
+    h4 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding: 3rem 0 1rem 0;
+    }
+  }
+  .section {
+    text-align: left;
+
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 6rem 5rem;
+    margin-top: 4rem;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      line-height: 18.75px;
+      font-size: 1.6rem;
+      .text-content {
+        padding-left: 1.5rem;
+        .cut2 {
+          display: none;
+        }
+      }
+      .logo-content {
+        background-repeat: no-repeat;
+        background-size: 100% 13rem;
+        background-position: left top;
+        width: 70rem;
+        height: inherit;
+      }
+      .logo-content1 {
+        background-image: url("../../images/css-icon1.png");
+      }
+      .logo-content2 {
+        background-image: url("../../images/html-icon1.png");
+      }
+      .logo-content3 {
+        background-image: url("../../images/url-icon1.png");
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .Content {
+    .section {
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    }
+    .header {
+      padding: 1rem 5rem;
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .Content {
+    width: 78%;
+    .nav {
+      display: flex;
+      flex-direction: row;
+      padding-top: 2rem;
+    }
+    .header {
+      padding: 1rem;
+    }
+    .section {
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+      .content {
+        .text-content {
+          padding-left: 0.5rem;
+        }
+        .logo-content {
+          background-size: 9.5rem 7.5rem;
+          width: 32rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+  .Content {
+    .nav {
+      i {
+        display: block;
+      }
+    }
+    width: 95%;
+    .section {
+      .content {
+        .logo-content {
+          width: 31rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Content {
+    .section {
+      .content {
+        .logo-content {
+          width: 55rem;
+        }
+      }
+    }
+  }
+}
